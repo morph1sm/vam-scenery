@@ -1,0 +1,82 @@
+<!doctype html>
+<title>Local Scenery</title>
+<style>
+    body {
+        font-family: sans-serif;
+        font-weight: bold;
+        -webkit-text-stroke-width: .5px;
+        -webkit-text-stroke-color: black;
+        text-align: center;
+        color: pink;
+
+        background: transparent;
+        boxsizing: border-box;
+        width: 100%;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 8px;
+        background: black center center no-repeat;
+        background-size: contain;
+        opacity: .99;
+    }
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: auto;
+        color: pink;
+        padding: 16px;
+    }
+    .button {
+        display: inline-block;
+        margin: 0 10px;
+        background: pink;
+        border-radius: 8px;
+        padding: 8px;
+        color: gray;
+        text-decoration: none;
+    }
+    .selected {
+        color: white;
+    }
+</style>
+
+<h1>Welcome to VAM</h1>
+<h2>Enjoy the local scenery!</h2>
+
+<h2>
+    <form>
+        <label>
+            Sort By
+            <select name="sort">
+                <option>Name</option>
+                <option value="new" {% if sort=='new' %}selected{% endif %}>New to Old</option>
+                <option value="old" {% if sort=='old' %}selected{% endif %}>Old to New</option>
+            </select>
+        </label>
+        <label>
+            Filter
+            <input type="text" name="filter" value="{{ filter if filter }}">
+        </label>
+        <input class="button" type="submit">
+    </form>
+    {% if filter %}<p><a href="/">Reset</a></p>{% endif %}
+</h2>
+<div class="container">
+{% for scene in scenes %}
+    <a class="card" href="{{ scene.path }}" style="background-image: url({{ scene.thumbnail }})">
+        <div class="caption">{{ scene.name }}</div>
+    </a>
+{% endfor %}
+</div>
