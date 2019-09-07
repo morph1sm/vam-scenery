@@ -1,5 +1,6 @@
 import sys
 import os
+import urllib
 from flask import Flask, abort, send_file, render_template, request
 
 if getattr(sys, 'frozen', False):
@@ -23,7 +24,7 @@ def index():
     for subdir, dirs, files in os.walk(scene_folder):
         for file in files:
             file_name, extension = os.path.splitext(file)
-            url = "/scenes/{}/{}".format(subdir[19:], file_name)
+            url = text_encoded = urllib.parse.quote("/scenes/{}/{}".format(subdir[19:].replace('\\', '/'), file_name))
 
             if extension.lower() == '.vac' or extension.lower() == '.json':
                 scenes.append({
