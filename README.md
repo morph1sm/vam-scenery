@@ -1,7 +1,7 @@
 # Scenery
 Virt-A-Mate gallery for installed scenes.
 
-If you have lots of scenes and their number is growing by the day, you may decide to organize them into a neat folder system. You may also notice that your folder systems makes it harder to browse and load scenes. thumbnails are hidden away and things are ordered by modification date. Ugh!
+If you have lots of scenes and their number is growing by the day, you may decide to organize them into a neat folder system. You may also notice that your folder systems makes it harder to browse and load scenes. Thumbnails are hidden away and things are ordered by modification date. Ugh!
 
 Use Scenery to enable quick and visual scene browsing in VAM! It will index your scene folder into a flat grid of thumbnails and let you open any scene in just 3 clicks!
 

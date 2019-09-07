@@ -20,14 +20,12 @@ def index():
     term = request.args.get('filter', None)
     scenes = []
 
-    print(scene_folder)
-
     for subdir, dirs, files in os.walk(scene_folder):
         for file in files:
             file_name, extension = os.path.splitext(file)
             url = "/scenes/{}/{}".format(subdir[19:], file_name)
 
-            if extension == '.vac': #   or extension == '.json':
+            if extension.lower() == '.vac' or extension.lower() == '.json':
                 scenes.append({
                     "name": file,
                     "modified": get_modification_iso_date(subdir, file),
@@ -61,5 +59,5 @@ def get_modification_iso_date(subdir, file):
     return os.path.getctime(absolute_path)
 
 
-
-app.run(port=6969)
+if __name__ == "__main__":
+    app.run(port=6969)
