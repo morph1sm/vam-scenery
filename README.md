@@ -4,12 +4,12 @@
 
 - browse all downloaded scenes visually in a gallery inside VaM
 - sort and search your scenes
-- preview .vac files without polluting your VaM installation with random files
-- install .vac files consistently to prevent errors
-- list your currently installed plugins, assets, textures, etc. and see what
+- preview .vac files
+- TODO: install .vac files in a consistent structure to improve referencing scene dependencies
+- TODO: list your currently installed plugins, assets, textures, etc. and see what
   scenes depend on them
-- move scenes without breaking presets
-- analyze and repair scenes with broken references
+- TODO: move scenes without breaking presets
+- TODO: analyze and repair scenes with broken references
 
 ## Requirements
 
@@ -18,19 +18,20 @@ Python 3
 
 ## Installation
 
-- download the latest release into your VAM installation, e.g.
+- download the [latest release](//morph1sm/vam-scenery/releases) into your VAM installation, e.g.
   `\VAM\Custom\Mods\Morph1sm\VAMScenery`
 
 If you prefer to build the tool yourself, you can also:
 
-- clone or download and unzip this repo into any folder
+- clone or download and unzip this repo into any subfolder in your Vam installation
 - run the config.bat
 - run the build.bat
-- copy .exe from `dist` folder into your VAM installation, e.g.
-  `\VAM\Custom\Mods\Morph1sm\VAMScenery`
 
 ## Usage
 
 - run scenery.exe before you run VAM
 - in VAM, click the cloud icon the Quick Panel
-- type in http://localhost:6969
+- type in `localhost:6969` and click Go
+- to autostart VaM Scenery when VaM is started:
+  - click the gear icon in the top right corner
+  - check the auto start checkbox for the mode(s) should autostart the gallery
