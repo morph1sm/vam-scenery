@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block title %}VaM Scenery Settings{% endblock %} {%
+block body %}
+<div class="title">Settings</div>
+
+    <form class="toolbar" method="POST">
+        <label>Automatically start VAM Scenery when VaM is opened in:</label>
+
+            <label>
+                <input type="checkbox" name="autovr" {% if autovr %}checked{% endif %} />
+                VR Mode
+            </label>
+
+                    <label>
+                <input type="checkbox"name="autodesk" {% if autodesk %}checked{% endif %} />
+                Desktop Mode
+            </label>
+
+            <input class="button" type="submit" value="Save" />
+
+    </form>
+
+{% endblock %}

@@ -1,27 +1,36 @@
-# Scenery
-Virt-A-Mate gallery for installed scenes.
+# VaM Scenery
 
-If you have lots of scenes and their number is growing by the day, you may decide to organize them into a neat folder system. You may also notice that your folder systems makes it harder to browse and load scenes. Thumbnails are hidden away and things are ordered by modification date. Ugh!
+## A scene manager for Virt-A-Mate.
 
-Use Scenery to enable quick and visual scene browsing in VAM! It will index your scene folder into a flat grid of thumbnails and let you open any scene in just 3 clicks!
+- browse all downloaded scenes visually in a gallery inside VaM
+- sort and search your scenes
+- preview .vac files without polluting your VaM installation with random files
+- install .vac files consistently to prevent errors
+- list your currently installed plugins, assets, textures, etc. and see what
+  scenes depend on them
+- move scenes without breaking presets
+- analyze and repair scenes with broken references
 
-It can also sort and filter your scenes.
-
-
-Requirements
+## Requirements
 
 Virta-A-Mate
 Python 3
 
+## Installation
 
-Usage
+- download the latest release into your VAM installation, e.g.
+  `\VAM\Custom\Mods\Morph1sm\VAMScenery`
 
-- clone or download this repo into any folder
+If you prefer to build the tool yourself, you can also:
+
+- clone or download and unzip this repo into any folder
 - run the config.bat
 - run the build.bat
-- copy the .exe from the dist folder into your VAM folder
-- run the .exe before you run VAM
-- in VAM, click the cloud open the Quick Panel
-- select the cloud icon (Online Browse) and type in http://localhost:6969
-- if you like this tool, you can also add the above URL to browse_sites.json in your VAM folder
+- copy .exe from `dist` folder into your VAM installation, e.g.
+  `\VAM\Custom\Mods\Morph1sm\VAMScenery`
 
+## Usage
+
+- run scenery.exe before you run VAM
+- in VAM, click the cloud icon the Quick Panel
+- type in http://localhost:6969

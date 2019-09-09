@@ -1,5 +1,4 @@
-REM @echo off
-echo "Starting Local Scenery Server"
+echo "Starting VAM Scenery Dev Server"
 CALL venv\Scripts\activate
 set FLASK_APP=scenery.py
 set FLASK_DEBUG=1
