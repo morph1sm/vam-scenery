@@ -16,7 +16,7 @@
 
 ## Installation
 
-- download the [latest release](//morph1sm/vam-scenery/releases) into your VAM installation, e.g.
+- download the [latest release](https://github.com/morph1sm/vam-scenery/releases) into your VAM installation, e.g.
   `\VAM\Custom\Mods\`
 
 If you prefer to build the tool yourself, you can also:
